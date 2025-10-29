@@ -53,7 +53,9 @@ class Chatlog extends Component
         $this->messages = array_merge($this->messages, [['sender' => 'bot', 'message' => $text]]);
 
         $this->prompt = "";
-
+        
+        // Trigger frontend scroll event
+        $this->dispatch('scrollToBottom');
 
     }
 

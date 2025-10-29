@@ -1,6 +1,10 @@
     <div class="flex-1 xl:py-10">
         <div class="relative mx-auto flex max-w-[720px] flex-col">
-            <div class="custom-scrollbar relative z-20 max-h-[50vh] flex-1 space-y-7 overflow-y-auto pb-10 lg:pb-7">
+            <div x-data x-init="$wire.on('scrollToBottom', () => {
+                $nextTick(() => {
+                    $el.scrollTop = $el.scrollHeight;
+                });
+            });" class="relative z-20 max-h-[50vh] flex-1 space-y-7 overflow-y-auto pb-10 lg:pb-7">
 
                 @foreach ($messages as $message)
                     @if ($message['sender'] == 'user')
