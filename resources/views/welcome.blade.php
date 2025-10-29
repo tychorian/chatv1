@@ -27,7 +27,7 @@
         </div>
 
 
-        <h1 class="font-bold">Aeternus Consulting AI Chat Demo</h1>
+        <h1 class="font-bold">AI Chat Demo</h1>
         <flux:button x-data x-on:click="$flux.dark = ! $flux.dark">Light|Dark</flux:button>
     </flux:header>
 
